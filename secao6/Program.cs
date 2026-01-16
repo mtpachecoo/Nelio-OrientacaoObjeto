@@ -1,16 +1,19 @@
-﻿
-System.Console.WriteLine("Qual será o tamanho da lista?");
-int n = int.Parse(Console.ReadLine());
-double[] vect = new double[n];
+﻿int n = int.Parse(Console.ReadLine());
 
-System.Console.WriteLine("Digite os valores da lista");
+Product[] produtos = new Product[n];
+
 for(int i = 0; i < n; i++)
 {
-    vect[i] = double.Parse(Console.ReadLine());
+    string name = Console.ReadLine();
+    double price = double.Parse(Console.ReadLine());
+    produtos[i] = new Product(name, price);
 }
-
-foreach (double list in vect)
+double sum = 0.0;
+for(int i = 0; i < n; i++)
 {
-    System.Console.WriteLine(list);
+    sum += produtos[i].Price;
 }
+double media = sum / n;
 
+System.Console.WriteLine(string.Join(" ", produtos));
+System.Console.WriteLine("Average Price = " + media.ToString("F2"));
