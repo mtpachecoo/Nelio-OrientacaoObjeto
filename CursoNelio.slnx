@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Secao06/">
+    <Project Path="src/Secao06/ExercicioVetores/ExercicioVetores.csproj" />
+  </Folder>
+</Solution>
