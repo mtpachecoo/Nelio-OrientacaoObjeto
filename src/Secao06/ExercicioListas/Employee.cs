@@ -21,6 +21,6 @@ public class Employee
 
     public override string ToString()
     {
-        return Id + Name + Salary;
+        return $"{Id}, {Name}, {Salary}";
     }
 }

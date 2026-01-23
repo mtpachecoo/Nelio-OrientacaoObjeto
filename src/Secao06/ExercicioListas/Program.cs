@@ -6,6 +6,7 @@ namespace Secao06.ExercicioListas
         static void Main(string[] args)
         {
             List<Employee> employees = new List<Employee>();
+
             System.Console.Write("How many employess will be registered? ");
             int qtdEmplyoess = int.Parse(Console.ReadLine());
 
@@ -24,13 +25,25 @@ namespace Secao06.ExercicioListas
             }
             System.Console.Write("Enter the employee id that will have salary increase : ");
             int searchId = int.Parse(Console.ReadLine());
-            
-            
+            Employee emp = employees.Find(x => x.Id == searchId);
 
+            if (emp != null)
+            {
+                System.Console.Write("Enter the percentage: ");
+                double percentage = double.Parse(Console.ReadLine());
+                emp.RaiseSalary(percentage);
+            }
+            else
+            {
+                System.Console.WriteLine("This id does not exist!");
+            }
+
+            System.Console.WriteLine("Update list of employess:");
             foreach (var pessoas in employees)
             {
                 System.Console.WriteLine(pessoas);
             }
+            
 
         }    
         
